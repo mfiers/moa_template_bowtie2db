@@ -2,14 +2,14 @@ author: Mark Fiers
 backend: ruff
 commands:
   clean:
-    help: Remove all job data, not the Moa job itself, note that this must be implemented
-      by the template.
+    help: Remove all job data, not the Moa job itself, note that
+      this must be implemented by the template.
     mode: simple
   run:
     help: Create the bowtie2 database
     mode: reduce
 creation_date: Wed Nov 10 07:56:48 2010
-description: Builds a bowtie2 index from a reference sequence
+description: Builds a bowtie2 database from a reference sequence
 filesets:
   input:
     category: input
