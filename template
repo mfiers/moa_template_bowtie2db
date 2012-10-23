@@ -11,11 +11,13 @@ commands:
     help: Create the bowtie2 database
     mode: reduce
 creation_date: 2012-05-23T14:05
-description: Builds a bowtie2 database from a reference sequence
+description: 'Builds a Bowtie2 database from a reference sequence.
+   See http://bowtie-bio.sourceforge.net/bowtie2/index.shtml for
+   more information'
 filesets:
   input:
     category: input
-    help: Input fasta file for the db
+    help: Input fasta file for the database
     optional: false
     pattern: '*/*.fasta'
     type: set
@@ -34,6 +36,6 @@ parameters:
     optional: true
     type: string
   title:
-    default: "Build a bowtie2 database"
+    default: "Build a bowtie2 database from {}"
     type: string
-title: Bowtie2 index builder
+title: Bowtie2 database builder
