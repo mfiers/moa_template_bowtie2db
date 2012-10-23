@@ -1,5 +1,7 @@
 author: Mark Fiers
 backend: ruff
+prerequisites:
+  bowtie2-build: 'bowtie2-build --version'
 commands:
   clean:
     help: Remove all job data, not the Moa job itself, note that
@@ -8,12 +10,12 @@ commands:
   run:
     help: Create the bowtie2 database
     mode: reduce
-creation_date: Wed Nov 10 07:56:48 2010
+creation_date: 2012-05-23T14:05
 description: Builds a bowtie2 database from a reference sequence
 filesets:
   input:
     category: input
-    help: Input fasta file for the bowtie2 database
+    help: Input fasta file for the db
     optional: false
     pattern: '*/*.fasta'
     type: set
@@ -23,18 +25,15 @@ filesets:
     help: database name to create
     pattern: db
 moa_id: bowtie2db
-modification_date: Wed Dec 09 07:56:48 2010
+modification_date: 2012-05-23T14:05
 name: bowtie2db
-parameter_category_order:
-- ''
-- input
-- system
-- advanced
 parameters:
   extra_params:
-    category: ''
     default: ''
-    help: any optional parameters
+    help: any optional parameters for bowtie2db-build
     optional: true
+    type: string
+  title:
+    default: "Build a bowtie2 database"
     type: string
 title: Bowtie2 index builder
